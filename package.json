@@ -12,6 +12,10 @@
   },
   "model": "",
   "license": "ISC",
+  "engines": {
+    "node": "8.11.3",
+    "npm": "5.6.0"
+  },
   "bugs": {
     "url": "https://github.com/ricarellano/car-inventory/issues"
   },
