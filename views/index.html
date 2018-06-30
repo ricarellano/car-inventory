@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Cars Inventory</title>
+
+  <!-- STYLESHEETS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles/styles.css">
+  <!-- VENDOR SCRIPTS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.min.js"></script>
+
+  <!-- APPLICATION SCRIPTS -->
+  <script src="scripts/app.js"></script>
+
+</head>
+<body>
+  <div class="container">
+    <h1 class="text-center">Car Inventory</h1>
+    <div class="row">
+      <div class="col-md-8 col-md-offset-2">
+        <form class="form-inline" id="newCarForm">
+          <div class="form-group">
+            <label for="title">Brand</label>
+            <input type="text" class="form-control" name="brand" placeholder="Car brand">
+          </div>
+          <div class="form-group">
+            <label for="title">Model</label>
+            <input type="text" class="form-control" name="model" placeholder="Car model">
+          </div>
+          <div class="form-group">
+            <label for="title">Year</label>
+            <input type="text" class="form-control" name="year" placeholder="Car year">
+          </div>
+          <button type="submit" class="btn btn-default">Create car</button>
+        </form>
+        <div id='carTarget'>
+          <!-- handlebars template -->
+          <script id="cars-template" type="text/x-handlebars-template">
+            <hr>
+            <p>
+              <b>{{car.brand}}</b>
+              model:  <b>{{car.model}}</b> 
+              year:    <b>{{car.year}}</b> 
+              <button type="button" name="button" class="deleteBtn btn btn-danger pull-right" data-id={{car._id}}>Delete</button>
+            </p>
+          </script>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
